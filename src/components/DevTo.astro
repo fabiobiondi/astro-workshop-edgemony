@@ -1,0 +1,23 @@
+---
+
+const {data} = Astro.props;
+---
+
+{
+  data.map(post => {
+    return <li>
+        <a href={post.url}>{post.title}
+        </a>
+    </li>
+    })
+  }
+
+<style >
+    a {
+        @apply text-white hover:text-pink-500
+    }
+
+    .btn {
+        @apply text-white bg-green-500 hover:bg-green-600 transition rounded-xl px-3 py-1
+    }
+</style>
